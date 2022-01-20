@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Bonjour{% endblock %}
+{% block contenu %}
+<h1>Liste des donnateurs</h1>
+
+<h2> Total des promesses : {{total}} €</h2>
+
+{% for form in quelquun %}
+<h3>Adherent {{form['id_form']}}</h3>
+<p> Nom: {{form['nom']}}</p>
+<p> Prénom: {{form['prenom']}}</p>
+<p> Adresse: {{form['adresse']}}</p>
+<p> Mail: {{form['mail']}}</p>
+<p> Promesse: {{form['somme']}} €</p>
+<a href="{{url_for('index')}}">Accueil</a>
+
+{% endfor %}
+
+{% endblock %}

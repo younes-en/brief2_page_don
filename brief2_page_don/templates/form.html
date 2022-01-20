@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Saisir vos infos{% endblock %}
+
+{% block contenu %}
+<h1>Nouvel utilisateur</h1>
+
+<form action="{{url_for('add')}}" method="post">
+   <input type="text" name="nom" id="nom"> <br>
+   <input type="text" name="prenom" id=""> <br>
+   <input type="text" name="adresse" id=""> <br>
+   <input type="text" name="mail" id=""> <br>
+   <input type="text" name="somme" id=""> <br>
+
+   <p><label for="confirmer">vous accetez les conditions du don.</label>
+      <input type="radio" id="confirmer" name="confirmer" value="">
+   </p>
+
+   <button type="submit">Valider</button>
+</form>
+{% endblock %}
